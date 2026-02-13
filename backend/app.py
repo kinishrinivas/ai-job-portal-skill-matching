@@ -160,16 +160,26 @@ def too_large(error):
         "message": f"Maximum file size is {Config.MAX_CONTENT_LENGTH / (1024*1024)}MB"
     }), 413
 
-# ===== FUTURE ROUTE BLUEPRINTS =====
+# ===== REGISTER ROUTE BLUEPRINTS =====
 
-# We will import and register route blueprints here later
-# Example:
-# from routes.auth import auth_bp
+# Import authentication routes
+from routes.auth import auth_bp, init_auth_routes
+
+# Initialize auth routes with database
+init_auth_routes(db)
+
+# Register authentication blueprint
+# All auth routes will be under /api/auth prefix
+# Example: /api/auth/register, /api/auth/login, /api/auth/profile
+app.register_blueprint(auth_bp, url_prefix='/api/auth')
+
+print("✅ Registered authentication routes: /api/auth")
+
+# Future route blueprints will be added here
 # from routes.jobs import jobs_bp
 # from routes.resume import resume_bp
 # from routes.matching import matching_bp
 # 
-# app.register_blueprint(auth_bp, url_prefix='/api/auth')
 # app.register_blueprint(jobs_bp, url_prefix='/api/jobs')
 # app.register_blueprint(resume_bp, url_prefix='/api/resume')
 # app.register_blueprint(matching_bp, url_prefix='/api/matching')
