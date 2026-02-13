@@ -1,0 +1,64 @@
+# requirements.txt - List of Python packages needed for the backend
+# Install all these using: pip install -r requirements.txt
+
+# ===== FLASK WEB FRAMEWORK =====
+Flask==3.0.0
+# Main web framework - creates the server, handles HTTP requests
+
+Flask-CORS==4.0.0
+# Allows frontend (React) to talk to backend (Flask) from different ports
+# CORS = Cross-Origin Resource Sharing
+
+# ===== DATABASE =====
+pymongo==4.6.1
+# Python driver for MongoDB - connects Python to MongoDB database
+
+# ===== AUTHENTICATION & SECURITY =====
+PyJWT==2.8.0
+# Creates and verifies JWT tokens for user authentication
+# JWT = JSON Web Token (like a digital ID card)
+
+bcrypt==4.1.2
+# Encrypts passwords - NEVER store plain passwords!
+# bcrypt hashes passwords so they can't be read if database is hacked
+
+python-dotenv==1.0.0
+# Reads .env file for environment variables (database password, secrets)
+# Keeps sensitive data out of code
+
+# ===== FILE HANDLING =====
+Werkzeug==3.0.1
+# Handles file uploads (resumes) securely
+# Comes with Flask but pinned for version stability
+
+# ===== PDF PROCESSING =====
+PyPDF2==3.0.1
+# Reads PDF files (extract text from resume PDFs)
+
+python-docx==1.1.0
+# Reads DOCX files (Microsoft Word resumes)
+
+# ===== AI/NLP FOR SKILL EXTRACTION =====
+spacy==3.7.2
+# Natural Language Processing library
+# Extracts skills, names, education from resume text
+
+# For spaCy English language model (install separately):
+# python -m spacy download en_core_web_sm
+
+nltk==3.8.1
+# Natural Language Toolkit - helps with text processing
+# Tokenization, stopword removal, etc.
+
+scikit-learn==1.4.0
+# Machine learning library
+# Used for text similarity and matching algorithms
+
+# ===== UTILITIES =====
+python-dateutil==2.8.2
+# Makes working with dates easier
+
+# ===== DEVELOPMENT TOOLS (Optional but helpful) =====
+python-magic-bin==0.4.14
+# Detects file types (is it really a PDF?)
+# Windows version with binary included

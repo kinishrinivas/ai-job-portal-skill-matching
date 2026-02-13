@@ -1,0 +1,3 @@
+# This file ensures Git tracks the uploads folder
+# Even though uploaded files are ignored by .gitignore
+# We want the folder structure to exist in Git

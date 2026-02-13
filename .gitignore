@@ -1,0 +1,74 @@
+# .gitignore - Files and folders to exclude from Git
+# These files should NEVER be committed to GitHub
+
+# ===== PYTHON =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ===== ENVIRONMENT VARIABLES =====
+.env
+# CRITICAL: Contains passwords and secret keys
+# NEVER commit this file!
+
+# ===== VIRTUAL ENVIRONMENT =====
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ===== UPLOADED FILES =====
+backend/uploads/*
+# Don't commit uploaded resumes (privacy!)
+# Keep the folder structure with .gitkeep
+
+# But keep .gitkeep files
+!backend/uploads/.gitkeep
+
+# ===== IDE & EDITOR =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# ===== LOGS =====
+*.log
+logs/
+
+# ===== DATABASE =====
+*.db
+*.sqlite
+*.sqlite3
+
+# ===== NODE_MODULES (for frontend later) =====
+node_modules/
+
+# ===== BUILD FILES (for frontend later) =====
+frontend/build/
+frontend/dist/
+
+# ===== JUPYTER NOTEBOOKS (if used) =====
+.ipynb_checkpoints/
+
+# ===== SPACY MODELS (large files) =====
+backend/models/en_core_web_sm/
