@@ -1,0 +1,48 @@
+
+ALICE JOHNSON
+Email: alice.johnson@email.com
+Phone: +1-234-567-8901
+
+SUMMARY
+Experienced Full-Stack Developer with 3 years of experience in building web applications
+using modern technologies. Proficient in Python, JavaScript, React, and MongoDB.
+
+EDUCATION
+Bachelor of Technology in Computer Science
+ABC University, 2021
+
+TECHNICAL SKILLS
+Programming Languages: Python, JavaScript, Java, C++
+Web Technologies: React, Node.js, Express.js, HTML, CSS, Bootstrap
+Databases: MongoDB, MySQL, PostgreSQL
+Cloud & DevOps: AWS, Docker, Git, GitHub
+Frameworks: Flask, Django, REST API
+
+PROFESSIONAL EXPERIENCE
+
+Software Developer - XYZ Tech Solutions (2021-2024)
+- Developed full-stack web applications using React and Flask
+- Implemented RESTful APIs with Python Flask backend
+- Worked with MongoDB for database management
+- Deployed applications on AWS cloud platform
+- Collaborated with team using Git and Agile methodologies
+
+PROJECTS
+
+E-Commerce Platform
+- Built a full-stack e-commerce application using React, Node.js, and MongoDB
+- Implemented user authentication with JWT
+- Created responsive UI with Bootstrap and CSS
+
+Task Management System
+- Developed a task management tool using Python Flask and PostgreSQL
+- Integrated real-time updates using WebSockets
+- Deployed on Docker containers
+
+CERTIFICATIONS
+- AWS Certified Developer Associate
+- MongoDB Certified Developer
+
+LANGUAGES
+- English (Fluent)
+- Hindi (Native)

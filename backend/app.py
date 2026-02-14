@@ -165,23 +165,38 @@ def too_large(error):
 # Import authentication routes
 from routes.auth import auth_bp, init_auth_routes
 
-# Initialize auth routes with database
+# Import resume routes
+from routes.resume import resume_bp, init_resume_routes
+
+# Import job routes
+from routes.job import job_bp, init_job_routes
+
+# Initialize routes with database
 init_auth_routes(db)
+init_resume_routes(db)
+init_job_routes(db)
 
 # Register authentication blueprint
 # All auth routes will be under /api/auth prefix
 # Example: /api/auth/register, /api/auth/login, /api/auth/profile
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
-
 print("✅ Registered authentication routes: /api/auth")
 
+# Register resume blueprint
+# All resume routes will be under /api/resume prefix
+# Example: /api/resume/upload, /api/resume/my-resumes
+app.register_blueprint(resume_bp, url_prefix='/api/resume')
+print("✅ Registered resume routes: /api/resume")
+
+# Register job blueprint
+# All job routes will be under /api/jobs prefix
+# Example: /api/jobs/create, /api/jobs/all, /api/jobs/<id>
+app.register_blueprint(job_bp, url_prefix='/api/jobs')
+print("✅ Registered job routes: /api/jobs")
+
 # Future route blueprints will be added here
-# from routes.jobs import jobs_bp
-# from routes.resume import resume_bp
 # from routes.matching import matching_bp
 # 
-# app.register_blueprint(jobs_bp, url_prefix='/api/jobs')
-# app.register_blueprint(resume_bp, url_prefix='/api/resume')
 # app.register_blueprint(matching_bp, url_prefix='/api/matching')
 
 # ===== RUN THE APP =====
